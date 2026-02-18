@@ -1,6 +1,6 @@
-#Insider QA Automation Case
+**Insider QA Automation Case**
 
-##Project Overview
+**Project Overview**
 
 This project is a **Selenium + TestNG UI Test Automation Framework** developed to validate the Insider careers QA job listing flow.
 
@@ -19,7 +19,7 @@ The test scenario automates the following user journey:
 
 ---
 
-##Project Architecture
+**Project Architecture**
 
 Project follows **Page Object Model (POM)** design pattern.
 
@@ -37,17 +37,17 @@ src
 
 ---
 
-##Packages & Classes
+**Packages & Classes**
 
-###pages
+***pages***
 
 Contains all page object classes.
 
-####CareersPage
+***CareersPage***
 
 Handles navigation to QA job listings and clicking *See All Jobs*.
 
-####HomePage
+***HomePage***
 
 Responsible for homepage operations:
 
@@ -55,7 +55,7 @@ Responsible for homepage operations:
 * Cookie acceptance
 * Section load validation
 
-####QAJobsPage
+***QAJobsPage***
 
 Handles job listing page logic:
 
@@ -64,29 +64,29 @@ Handles job listing page logic:
 * Clicking first job
 * Switching to new tab
 
-####LeverPage
+***LeverPage***
 
 Validates that user is redirected to Lever application page.
 
 ---
 
-###utilities
+***utilities***
 
 Framework infrastructure classes.
 
-####BaseTest
+***BaseTest***
 
 Handles test setup & teardown.
 
-####ConfigReader
+***ConfigReader***
 
 Reads configuration values from `config.properties`.
 
-####DriverFactory
+***DriverFactory***
 
 Creates and manages WebDriver instance.
 
-####WaitUtils
+***WaitUtils***
 
 Custom explicit wait utility wrapper for:
 
@@ -97,9 +97,9 @@ Custom explicit wait utility wrapper for:
 
 ---
 
-###tests
+**tests**
 
-####InsiderTest
+***InsiderTest***
 
 Contains the main test scenario:
 
@@ -109,9 +109,9 @@ insiderQAFlow()
 
 ---
 
-###resources
+***resources***
 
-####config.properties
+***config.properties***
 
 Stores environment configuration:
 
@@ -122,7 +122,7 @@ qaUrl=https://insiderone.com/careers/quality-assurance/
 
 ---
 
-##Technologies Used
+**Technologies Used**
 
 * Java 11 (Project built with Java 11 (LTS) for stability and compatibility. Can be upgraded to Java 17 easily if required.)
 * Selenium 4.18
@@ -132,21 +132,21 @@ qaUrl=https://insiderone.com/careers/quality-assurance/
 
 ---
 
-##How to Run Tests
+**How to Run Tests**
 
-### 1 Clone repository
+***1 Clone repository***
 
 ```
 git clone <repo-url>
 ```
 
-### 2 Install dependencies
+***2 Install dependencies***
 
 ```
 mvn clean install
 ```
 
-### 3 Run tests
+***3 Run tests***
 
 ```
 mvn clean test
@@ -154,9 +154,9 @@ mvn clean test
 
 ---
 
-##Framework Design Decisions
+**Framework Design Decisions**
 
-###Explicit Wait Strategy
+***Explicit Wait Strategy***
 
 All waits are handled via `WaitUtils` to prevent:
 
@@ -166,13 +166,13 @@ All waits are handled via `WaitUtils` to prevent:
 
 ---
 
-###Singleton Driver Pattern
+***Singleton Driver Pattern***
 
 DriverFactory ensures only one WebDriver instance runs during test execution.
 
 ---
 
-###Config Driven URLs
+***Config Driven URLs***
 
 URLs are not hardcoded in tests or pages. They are stored in:
 
@@ -188,7 +188,7 @@ This allows:
 
 ---
 
-##Test Stability Considerations
+**Test Stability Considerations**
 
 Framework includes safeguards for dynamic DOM:
 
@@ -199,7 +199,7 @@ Framework includes safeguards for dynamic DOM:
 
 ---
 
-##Author
+**Author**
 
 **Munir Akman**
 
@@ -207,7 +207,7 @@ QA Automation Engineer Candidate Case Study
 
 ---
 
-##Notes for Reviewers
+**Notes for Reviewers**
 
 This framework was intentionally designed to demonstrate:
 
